@@ -1,19 +1,23 @@
 //ejercicio uno Mía Pioli
 
 let gmail = prompt("Registre su gmail");
-let gmailtrue = "miapioli@gmail.com";
-console.log(gmail);
-for (let i = 0; i < gmail.length; i++) {
-  if (gmail === gmailtrue) {
-    console.log("Bienvenida miapioli@gmail.com");
-    break;
-  }
-  if (gmail !== "@") {
-    console.log("Su gmail no es válido");
-    break;
-  }
-  if (gmail === "@") {
-    console.log("Su gmail es incorrecto");
-    break;
+let mia = "miapioli@gmail.com";
+
+if (gmail === null) {
+  alert("Operación cancelada");
+} else {
+  for (let i = 0; i < gmail.length; i++) {
+    if (gmail[i] === "@") {
+      tieneArroba = true;
+      break;
+    } else gmail[i] !== "@";
+    tieneArroba = false;
   }
 }
+if (tieneArroba) {
+  if (tieneArroba == true && mia === gmail) {
+    alert("Bienvenida Mía");
+  } else if (tieneArroba == true) {
+    alert("Su gmail es incorrecto");
+  }
+} else alert("Esto no es un gmail");
